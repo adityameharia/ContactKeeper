@@ -66,7 +66,8 @@ const AuthState = (props) => {
 			dispatch({ type: LOGIN_SUCCESS, payload: res.data });
 			loadUser();
 		} catch (error) {
-			dispatch({ type: LOGIN_FAIL, payload: error.response.data.msg });
+			//console.log(error.response.data);
+			dispatch({ type: LOGIN_FAIL, payload: error.response.data });
 		}
 	};
 
